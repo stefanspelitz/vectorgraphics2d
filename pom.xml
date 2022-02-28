@@ -54,7 +54,7 @@
             <configuration>
               <proguardInclude>src/etc/proguard.conf</proguardInclude>
                 <options>
-                  <option>-target ${compileSource}</option>
+                  <option>-target ${maven.compiler.source}</option>
                 </options>
                 <libs>
                   <lib>${runtime.jar}</lib>
@@ -81,8 +81,8 @@
   			<artifactId>maven-compiler-plugin</artifactId>
   			<version>2.3.2</version>
   			<configuration>
-                <source>${compileSource}</source>
-                <target>${compileSource}</target>
+                <source>${maven.compiler.source}</source>
+                <target>${maven.compiler.target}</target>
   			</configuration>
   		</plugin>
   		<plugin>
